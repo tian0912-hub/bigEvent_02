@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
     <!-- 引入自己的样式表 -->
     <link rel="stylesheet" href="./css/login.css">
- 
+    <!-- 引入layui的js文件 -->
+
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <!-- 引入jQuery -->
+
+    <script src="./assets/lib/jquery.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="./js/login.js"></script>
 </head>
 
 <body>
@@ -22,66 +29,60 @@
         <div class="title"></div>
         <!-- 登录盒子 -->
         <div id="loginBox">
-            <form class="layui-form">
+            <form class="layui-form" id="login_form">
                 <div class="layui-form-item">
-                    <i class="layui-icon layui-icon-username"></i> 
-                        <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
-                            autocomplete="off" class="layui-input">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
                     <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
-            </div>
-            <div class="layui-form-item">
+                </div>
+                <div class="layui-form-item">
 
-            <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登录</button>
-            </div>
-            <div class="layui-form-item links">
-                <a href="javascript:;" id="toReg">去注册账号</a>
-              </div>
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登录</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="toReg">去注册账号</a>
+                </div>
             </form>
 
-            
+
         </div>
+        <!-- 注册盒子 -->
+
         <div id="regBox">
-            <form class="layui-form">
+            <form class="layui-form" id="#reg_form">
                 <div class="layui-form-item">
-                    <i class="layui-icon layui-icon-username"></i> 
-                        <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
-                            autocomplete="off" class="layui-input">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
                     <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
-            </div>
-            <div class="layui-form-item">
-                <i class="layui-icon layui-icon-password"></i>
-                <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请输入密码"
-                    autocomplete="off" class="layui-input">
-        </div>
-        <div class="layui-form-item">
+                </div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="repassword" required lay-verify="required|pwd|repwd"
+                        placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
 
-            <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登录</button>
-        </div>
-            <div class="layui-form-item links">
-                <a href="javascript:;" id="toLogin">去登录</a>
-              </div>
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>注册</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="toLogin">去登录</a>
+                </div>
             </form>
-            
+
         </div>
-        <!-- 注册盒子 -->
     </div>
 
-       <!-- 引入layui的js文件 -->
 
-       <script src="./assets/lib/layui/layui.all.js"></script>
-       <!-- 引入jQuery -->
-   
-       <script src="./assets/lib/jquery.js"></script>
-       <!-- 引入自己的js文件 -->
-       <script src="./js/login.js"></script>
 
 </body>
 
