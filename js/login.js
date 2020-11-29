@@ -41,6 +41,7 @@ $(function(){
         $.post('http://ajax.frontend.itheima.net/api/reguser',data,function(res){
             if(res.status !== 0) return layer.msg(res.message);
             layer.msg("注册成功，请登录");
+            
             //模拟点击去登录链接的操作，实现注册成功后自动跳转到登录页面的操作
             $("#toLogin").click();
         })
@@ -60,6 +61,11 @@ $(function(){
             },
             success:function(res){
                 if(res.status !== 0) return layer.msg("登录失败");
+                layer.msg('登录成功！')
+        // 将登录成功得到的 token 字符串，保存到 localStorage 中
+        localStorage.setItem('token', res.token)
+        // 跳转到后台主页
+        location.href = '/index.html'
 
             }
         })
